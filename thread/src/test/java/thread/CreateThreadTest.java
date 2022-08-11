@@ -1,3 +1,5 @@
+package thread;
+
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.Callable;

@@ -1,8 +1,10 @@
+package threadfuture;
+
 import org.junit.jupiter.api.Test;
+import util.SmallTool;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.StringJoiner;
 import java.util.concurrent.*;
 import java.util.function.BiFunction;
 import java.util.function.Function;
@@ -196,10 +198,12 @@ public class CompletableFutureTest {
     @Test
     public void allOf() {
         Map<String, String> result = new HashMap<>();
+        CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(() -> "");
         CompletableFuture.allOf(
                 CompletableFuture.runAsync(() -> result.put("key1", "value1"), executor),
                 CompletableFuture.runAsync(() -> result.put("key2", "value2"), executor),
-                CompletableFuture.runAsync(() -> result.put("key3", "value3"), executor)
+                CompletableFuture.runAsync(() -> result.put("key3", "value3"), executor),
+                completableFuture
         ).join();
         System.out.println("result = " + result);
     }

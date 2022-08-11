@@ -1,3 +1,5 @@
+import util.SmallTool;
+
 /**
  * 如果一个线程A执行了thread.join()语句，其含义是当前线程 A等待thread线程终止之后 才从thread.join()返回。
  */
