@@ -33,6 +33,14 @@ public class CreateThreadTest {
 
     /**
      * 实现 {@link Callable} 接口，重写 {@link Callable#call()} 方法
+     * 从JAVA5开始，JUC 提供了Callable接口，该接口是Runnable接口的增强版，
+     * Callable接口提供了一个call()方法可以作为线程执行体，但call()方法比
+     * run()方法功能更强大，call()方法的功能的强大体现在：
+     * <ul>
+     *     <li>call()方法可以有返回值</li>
+     *     <li>call()方法可以声明抛出异常</li>
+     * </ul>
+     *
      * @throws ExecutionException 执行异常
      * @throws InterruptedException 中断异常
      */
