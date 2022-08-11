@@ -1,3 +1,5 @@
+package thread;
+
 import util.SmallTool;
 
 /**
