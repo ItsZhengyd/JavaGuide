@@ -1,2 +1,6 @@
 /.idea/
 /thread/target/
+/service-discovery-nacos/target/
+/service-call-dubbo/target/
+/service-call-feign/target/
+/service-call-openfeign/target/
